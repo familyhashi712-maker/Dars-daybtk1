@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>💉 درس أدوية السكري - مخطط ذهني تفاعلي</title>
+<style>
+  body {
+    background: #f9fafb;
+    font-family: "Tajawal", sans-serif;
+    margin: 0;
+    padding: 20px;
+    color: #222;
+  }
+  h1 {
+    text-align: center;
+    color: #0d6efd;
+    margin-bottom: 25px;
+    font-size: 28px;
+  }
+  .box {
+    background: #fff;
+    border-radius: 16px;
+    padding: 15px 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  .box:hover { transform: scale(1.02); }
+  .group {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  ul { list-style-type: none; padding-right: 20px; margin-right: 0; display: none; }
+  li { margin: 6px 0; position: relative; }
+  li::before { content: "●"; position: absolute; right: -16px; color: inherit; }
+  .sub { font-weight: bold; margin-top: 6px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; }
+  .drug-list { display: none; padding-right: 20px; margin-top: 4px; }
+  .drug { margin-right: 18px; }
+
+  /* ألوان المجموعات */
+  .insulin .group, .insulin li::before { color: #0d6efd; }
+  .amylin .group, .amylin li::before { color: #6f42c1; }
+  .incretin .group, .incretin li::before { color: #198754; }
+  .oral .group, .oral li::before { color: #e55300; }
+
+  .btn { background: #ddd; border: none; border-radius: 8px; padding: 2px 8px; cursor: pointer; font-size: 14px; }
+  .btn:hover { background: #ccc; }
+
+  @media (max-width:600px){
+    h1 { font-size: 22px; }
+    .group { font-size: 16px; }
+    .btn { font-size: 12px; padding: 2px 6px; }
+  }
+</style>
+</head>
+<body>
+
+<h1>💉 درس أدوية السكري - مخطط ذهني تفاعلي</h1>
+
+<!-- الأنسولين -->
+<div class="box insulin">
+  <div class="group">1️⃣ الأنسولين ومشتقاته</div>
+  <ul>
+    <li class="sub">سريع وقصير المفعول <button class="btn">عرض</button>
+      <ul class="drug-list">
+        <li class="drug">Regular insulin</li>
+        <li class="drug">Insulin lispro</li>
+        <li class="drug">Insulin aspart</li>
+        <li class="drug">Insulin glulisine</li>
+      </ul>
+    </li>
+    <li class="sub">متوسط المفعول <button class="btn">عرض</button>
+      <ul class="drug-list">
+        <li class="drug">NPH insulin</li>
+      </ul>
+    </li>
+    <li class="sub">طويل المفعول <button class="btn">عرض</button>
+      <ul class="drug-list">
+        <li class="drug">Insulin glargine</li>
+        <li class="drug">Insulin detemir</li>
+        <li class="drug">Insulin degludec</li>
+      </ul>
+    </li>
+    <li class="sub">تركيبات الأنسولين <button class="btn">عرض</button>
+      <ul class="drug-list">
+        <li class="drug">(NPH + Regular insulin)</li>
+        <li class="drug">(Lispro Protamine + Lispro)</li>
+        <li class="drug">(Aspart Protamine + Aspart)</li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<!-- الأميلين -->
+<div class="box amylin">
+  <div class="group">2️⃣ الأنالوغ الصناعي للأميلين</div>
+  <ul>
+    <li class="sub">الأدوية <button class="btn">عرض</button>
+      <ul class="drug-list">
+        <li class="drug">Pramlintide</li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<!-- الإنكريتين -->
+<div class="box incretin">
+  <div class="group">3️⃣ محاكيات الإنكريتين</div>
+  <ul>
+    <li class="sub">الأدوية <button class="btn">عرض</button>
+      <ul class="drug-list">
+        <li class="drug">Exenatide</li>
+        <li class="drug">Liraglutide</li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<!-- الفموية -->
+<div class="box oral">
+  <div class="group">4️⃣ الأدوية الفموية</div>
+  <ul>
+    <li class="sub">السلفونيل يوريا <button class="btn">عرض</button>
+      <ul class="drug-list">
+        <li class="drug">Glyburide</li>
+        <li class="drug">Glipizide</li>
+        <li class="drug">Gliclazide</li>
+        <li class="drug">Glimepiride</li>
+      </ul>
+    </li>
+    <li class="sub">الغلينيدات <button class="btn">عرض</button>
+      <ul class="drug-list">
+        <li class="drug">Repaglinide</li>
+        <li class="drug">Nateglinide</li>
+      </ul>
+    </li>
+    <li class="sub">البيغوانيدات <button class="btn">عرض</button>
+      <ul class="drug-list">
+        <li class="drug">Metformin</li>
+      </ul>
+    </li>
+    <li class="sub">الثيازوليدينديونات <button class="btn">عرض</button>
+      <ul class="drug-list">
+        <li class="drug">Pioglitazone</li>
+        <li class="drug">Rosiglitazone</li>
+      </ul>
+    </li>
+    <li class="sub">مثبطات α-جلوكوزيداز <button class="btn">عرض</button>
+      <ul class="drug-list">
+        <li class="drug">Acarbose</li>
+        <li class="drug">Miglitol</li>
+        <li class="drug">Voglibose</li>
+      </ul>
+    </li>
+    <li class="sub">مثبطات DPP-4 <button class="btn">عرض</button>
+      <ul class="drug-list">
+        <li class="drug">Alogliptin</li>
+        <li class="drug">Linagliptin</li>
+        <li class="drug">Saxagliptin</li>
+        <li class="drug">Sitagliptin</li>
+        <li class="drug">Vildagliptin</li>
+      </ul>
+    </li>
+    <li class="sub">مثبطات SGLT-2 <button class="btn">عرض</button>
+      <ul class="drug-list">
+        <li class="drug">Canagliflozin</li>
+        <li class="drug">Dapagliflozin</li>
+        <li class="drug">Empagliflozin</li>
+      </ul>
+    </li>
+    <li class="sub">أدوية أخرى <button class="btn">عرض</button>
+      <ul class="drug-list">
+        <li class="drug">Bromocriptine</li>
+        <li class="drug">Colesevelam</li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<script>
+  document.querySelectorAll('.box .group').forEach(group => {
+    group.addEventListener('click', e => {
+      const ul = group.nextElementSibling;
+      ul.style.display = (ul.style.display === 'block') ? 'none' : 'block';
+    });
+  });
+
+  document.querySelectorAll('.btn').forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.stopPropagation();
+      const drugList = btn.parentElement.querySelector('.drug-list');
+      drugList.style.display = (drugList.style.display === 'block') ? 'none' : 'block';
+    });
+  });
+</script>
+
+</body>
+</html>
